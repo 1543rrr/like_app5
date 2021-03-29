@@ -12,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def edit
@@ -27,5 +28,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:content)
   end
-  
+
 end
